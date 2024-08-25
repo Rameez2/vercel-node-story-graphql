@@ -1,0 +1,33 @@
+story,user,comments GET complete
+Relations Getting Compelte
+Mutations {
+    user get,create,delete [update]
+    story get,create,delete [update]
+    comment get,create,delete [update]
+}
+
+user DEL --> user_comments del + ---> user_stories del + --> stories_comments del 
+story DEL --> stories_comments del 
+comment DEL --> comment DEL simple ,(Add reply in future)
+
+user UPDATE --> can only modify its own DATA
+story UPDATE --> can only be modify by its OWNER
+comment UPDATE --> can only be modify by its OWNER
+
+More Features added {
+    Story Likes,
+    Story Favorites
+}
+
+******* REMAINING *******
+{
+    follow author,
+}
+
+DOING :
+{
+    users {
+        follow,followers
+    }
+    GET followers/followings
+}

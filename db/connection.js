@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 module.exports = (async function connectDB() {
   const uri = process.env.MONGO_URI; // MongoDB URI from environment variables
   try {
-    // Attempt to connect to MongoDB with appropriate options
-    await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    // Connect using default Mongoose options (as of Mongoose v6+)
+    await mongoose.connect(uri);
     console.log('MongoDB connected successfully'); // Success message
   } catch (err) {
     console.error('MongoDB connection error:', err); // Error handling
